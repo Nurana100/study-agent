@@ -22,7 +22,10 @@ tools = [{
     },
 }]
 
-messages = [{"role": "user", "content": input("Ask me something: ")}]
+messages = [
+    {"role": "system", "content": "Always use the calculator tool for any arithmetic."},
+    {"role": "user", "content": input("Ask me something: ")},
+]
 
 while True:
     response = client.chat.completions.create(
@@ -39,6 +42,7 @@ while True:
 
     for call in msg.tool_calls:
         args = json.loads(call.function.arguments)
+        print(f"[tool] calculator({args['expression']})")
         messages.append({
             "role": "tool",
             "tool_call_id": call.id,
