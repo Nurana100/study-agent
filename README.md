@@ -30,3 +30,4 @@ Example: "What is 15% of 2,340, plus 87?" → 438
 ## Next steps
 - Add more tools (save notes, web search)
 - Add a web UI with Streamlit
+##
