@@ -30,4 +30,9 @@ Example: "What is 15% of 2,340, plus 87?" → 438
 ## Next steps
 - Add more tools (save notes, web search)
 - Add a web UI with Streamlit
-##
+
+## Demo
+$ python agent.py
+> What is 15% of 2,340, plus 87?
+[tool call] calculator("2340 * 0.15 + 87")
+Answer: 438
